@@ -1,0 +1,54 @@
+<div>
+<div id="topBar">
+    <div>
+        <img class="logo" src="app/images/jugnoo.png">
+    </div>
+</div>
+<div class="mainDiv">
+    <form method="post" class="form" ng-submit="registerUser()" >
+        <div>
+            <label style="display: flex;justify-content: center">
+                <h2 id="createAccount">Create your account</h2>
+            </label>
+        </div>
+        <div id="formDiv">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text"  autocomplete="off" ng-blur="usernameValidation()" id="username" required>
+                <div><p id="umsg"></p></div>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="text" ng-blur="mobileNumberValidation()" id="mobileNum" autocomplete="off" required>
+                <div><p id="mobileNumMsg"></p></div>
+            </div>
+            <div class="form-group">
+                <label>Date of birth</label>
+                <input type="date" autocomplete="off" id="dob" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input ng-blur="passwordlength()" ng-attr-type="{{ showPassword ? 'text' : 'password' }}" id="pwd" autocomplete="off" required>
+                <!--<button id="passwordToggleButton" style="background-color: black" ng-click="togglePassword();"></button>-->
+                <div><p id="pwdmsg"></p></div>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input ng-attr-type="{{ showPassword ? 'text' : 'password' }}" ng-blur="passwordmatch()" id="cpwd" autocomplete="off" required>
+            </div>
+
+
+            <div class="actionOne">
+                <button type="submit" id="loginButton" class="btn btn-lg btn-primary" "><h5>CREATE ACCOUNT</h5></button>
+            </div>
+            <p class="actionTwo">
+                <a href="#!/">ALREADY HAVE AN ACCOUNT?</a>
+            </p>
+        </div>
+    </form>
+</div>
+</div>

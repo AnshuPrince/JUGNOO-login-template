@@ -1,0 +1,36 @@
+<div>
+
+    <div id="topBar">
+        <div>
+                <img class="logo" src="app/images/jugnoo.png">
+        </div>
+    </div>
+    <div class="mainDiv">
+        <form method="post" class="form" ng-submit="verifySubmit(username,password)">
+            <div id="formDiv">
+                <div class="form-group">
+                    <label>Username or email address</label>
+                    <input type="text" ng-model="username" value="" autocomplete="off" id="username">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input ng-attr-type="{{ showPassword ? 'text' : 'password' }}" ng-model="password" autocomplete="off" id="password">
+                    <!--<button id="passwordToggleButton" style="background-color: black" ng-click="togglePassword();"></button>-->
+                </div>
+
+
+                <div class="actionOne">
+                <button type="submit" id="loginButton" class="btn btn-lg btn-primary" ">Log in</button>
+                </div>
+                <p class="actionTwo">
+                    <a href="">Forgot password</a>
+                     /
+                    <a href="#!/register">CREATE ACCOUNT</a>
+                </p>
+                <p id="loginMessage">
+
+                </p>
+            </div>
+        </form>
+    </div>
+</div>

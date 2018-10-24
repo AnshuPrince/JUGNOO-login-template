@@ -12,6 +12,10 @@ app.config(function ($routeProvider) {
             templateUrl : '../app/views/homePage.html',
             controller : 'homeController'
         })
+        .when('/data',{
+            templateUrl : '../app/views/table.html',
+            controller : 'tableController'
+        })
         .otherwise({
             redirectTo : '/'
         })

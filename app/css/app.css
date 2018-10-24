@@ -37,7 +37,6 @@ label{
 button{
     color: #FFF;
     text-align: center;
-    width: 222px;
     margin: 0px auto;
 }
 .actionOne{
@@ -118,8 +117,12 @@ button{
     padding-left: -20px!important;
 }
 .userPic{
-    background-color: white;
-    opacity: 0.3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 85%;
+    color:white;
+    padding: 10px;
 
 }
 .userPicPanel{
@@ -145,6 +148,12 @@ button{
 @media screen and (max-width: 450px) {
     .userInfoPanel{
         width: auto!important;
+    }
+
+}
+@media screen and (max-width: 990px) {
+    .userInfoPanel{
+        width: 0;
     }
 
 }
@@ -205,4 +214,17 @@ button{
     width: 100% !important;
     margin: 0!important;
     padding: 5px 0;
+}
+#searchBar{
+    position: relative;
+    display: flex;
+    background-color: inherit;
+    justify-content: flex-end;
+}
+.input-group-addon{
+    background-color: inherit!important;
+    border: none!important;
+}
+#searchArea{
+    border: none;
 }

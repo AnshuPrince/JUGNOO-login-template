@@ -33,7 +33,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   module: {
     rules: [{
-      include: [path.resolve(__dirname, 'src')],
+      include: [path.resolve(__dirname,)],
       loader: 'babel-loader',
 
       options: {
@@ -57,8 +57,9 @@ module.exports = {
       }]
     }]
   },
-
-  entry: './app/js/app.js',
+  entry:{
+      "index.html": "./index.html",
+  },
 
   output: {
     filename: '[name].[chunkhash].js',

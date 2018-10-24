@@ -1,4 +1,8 @@
 app.controller('homeController',['$scope','$cookieStore','$location',function($scope,$cookieStore,$location){
+    if($(window).width()<450)
+    {
+        $('#userInfo').toggle(500);
+    }
     // verify the user using the cookie stored in browser
     function verifyCookie() {
         var cookie = $cookieStore.get('userId');

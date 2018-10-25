@@ -131,7 +131,10 @@ button{
     height: -webkit-fill-available;
 }
 .userPic{
+<<<<<<< HEAD
     position: sticky!important;
+=======
+>>>>>>> 84da997b51531c5f5c699a5cd73e2f46a8ba283a
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -158,6 +161,12 @@ button{
     }
 }
 
+@media screen and (max-width: 990px) {
+    .userInfoPanel{
+        width: 0;
+    }
+
+}
 @media screen and (max-width: 990px) {
     .userInfoPanel{
         width: 0;
@@ -240,6 +249,7 @@ button{
 #searchArea{
     border: none;
 }
+<<<<<<< HEAD
 #userInfo{
     padding: 0;
     height:100vh;
@@ -247,3 +257,5 @@ button{
     flex-direction: column;
     justify-content: space-between;
 }
+=======
+>>>>>>> 84da997b51531c5f5c699a5cd73e2f46a8ba283a

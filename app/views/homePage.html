@@ -1,8 +1,13 @@
 <div style="overflow: hidden;padding:0;">
     <div class="sidePanel col-lg-1 col-md-1 col-sm-2 col-xs-2">
             <div class="row">
+<<<<<<< HEAD
                 <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <button class="sideActions"><i class="fab fa-angular"></i></button>
+=======
+                <div class="actions col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
+                    <button id="slideToggle" ng-click="toggleSlideBar()"><span class="glyphicon glyphicon-user"></span></button>
+>>>>>>> 84da997b51531c5f5c699a5cd73e2f46a8ba283a
                 </div>
             </div>
             <div class="row">
@@ -43,14 +48,22 @@
         <div class="row" style="height: 250px;padding:0;">
             <div class="userInfoPanel col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="row userPicPanel">
+<<<<<<< HEAD
                     <form class="userPic col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <h4 style="font-family: 'Open Sans Light', sans-serif">{{name | uppercase}}</h4>
                         <div class="upload-btn-wrapper">
                             <button class="btn" style="padding: 0;"><i class="far fa-edit"></i></button>
+=======
+                    <form class="userPic col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
+                        {{name | uppercase}}
+                        <div class="upload-btn-wrapper">
+                            <button class="btn" style="padding: 0;"><span class="glyphicon glyphicon-edit"></span></button>
+>>>>>>> 84da997b51531c5f5c699a5cd73e2f46a8ba283a
                             <input type="file" name="myfile" />
 
                         </div>
                     </form>
+<<<<<<< HEAD
                 </div>
             </div>
         </div>
@@ -72,10 +85,17 @@
                         <span class="input-group-addon">
                             <button type="submit" style="background-color: inherit;border: none;">
                                 <span class="glyphicon glyphicon-search"></span>
+=======
+                    <div  style="top:100%;height: 100vh">
+                        <div class="col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12"style="padding:0;top:50%">
+                            <button ng-click="logout()" id="loginButton" class="btn btn-lg btn-primary" style="width: 50%;font-size: unset">
+                                <span class="glyphicon glyphicon-log-out"></span>
+>>>>>>> 84da997b51531c5f5c699a5cd73e2f46a8ba283a
                             </button>
                         </span>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
                 <a href="userInfo.html">
                     <span style="background-image:url('/app/images/one2.jpg');background-size: 32px 32px;">A</span>
@@ -83,10 +103,26 @@
 
             </div>
         </div>
+=======
+    </div>
+    <div id="searchBar">
+        <div class="input-group stylish-input-group">
+            <input type="text" id="searchArea" class="form-control" placeholder="Search">
+                    <span class="input-group-addon">
+                        <button type="submit" style="background-color: inherit;border: none;">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+        </div>
+    </div>
+
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+>>>>>>> 84da997b51531c5f5c699a5cd73e2f46a8ba283a
         <div id="homeData">
             <div class="chart-container" style="position: relative; height:40vh; width:80vw">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
     </div>
+
 </div>

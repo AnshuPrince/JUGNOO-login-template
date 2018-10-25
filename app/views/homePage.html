@@ -1,64 +1,92 @@
-<div style="overflow: hidden">
+<div style="overflow: hidden;padding:0;">
     <div class="sidePanel col-lg-1 col-md-1 col-sm-2 col-xs-2">
             <div class="row">
-                <div class="actions col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
-                    <button id="slideToggle" ng-click="toggleSlideBar()"><span class="glyphicon glyphicon-user"></span></button>
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="sideActions"><i class="fab fa-angular"></i></button>
                 </div>
             </div>
             <div class="row">
-                <div class="actions col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
-                    <button class="sideActions" ng-click="showData()">DATA</button>
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button id="slideToggle" ng-click="toggleSlideBar()"><i class="fas fa-user-cog"></i></button>
                 </div>
             </div>
             <div class="row">
-                <div class="actions col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
-                    <button class="sideActions">&#8801;</button>
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="sideActions" ng-click="showData()"><i class="fas fa-tachometer-alt"></i></button>
                 </div>
             </div>
             <div class="row">
-                <div class="actions col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
-                    <button class="sideActions">&#8801;</button>
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="sideActions" ng-click="showSwagTable()"><i class="fas fa-chart-bar"></i></button>
                 </div>
             </div>
+            <div class="row">
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="sideActions"><i class="fas fa-book"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="sideActions"><i class="fas fa-ticket-alt"></i></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="actions col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button class="sideActions"><i class="fas fa-cog"></i></i></button>
+                </div>
+            </div>
+
+
+
     </div>
-    <div id="userInfo">
-            <div class="userInfoPanel col-lg-2 col-md-2 col-sm-3 col-xs-3">
+    <div id="userInfo" class="col-lg-2 col-md-2 col-sm-3 col-xs-1">
+        <div class="row" style="height: 250px;padding:0;">
+            <div class="userInfoPanel col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="row userPicPanel">
-                    <form class="userPic col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12">
-                        {{name | uppercase}}
+                    <form class="userPic col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h4 style="font-family: 'Open Sans Light', sans-serif">{{name | uppercase}}</h4>
                         <div class="upload-btn-wrapper">
-                            <button class="btn" style="padding: 0;"><span class="glyphicon glyphicon-edit"></span></button>
+                            <button class="btn" style="padding: 0;"><i class="far fa-edit"></i></button>
                             <input type="file" name="myfile" />
 
                         </div>
                     </form>
-                    <div  style="top:100%;height: 100vh">
-                        <div class="col-12 col-lg-12 cl-md-12 col-sm-12 col-xs-12"style="padding:0;top:50%">
-                            <button ng-click="logout()" id="loginButton" class="btn btn-lg btn-primary" style="width: 50%;font-size: unset">
-                                <span class="glyphicon glyphicon-log-out"></span>
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
-    </div>
-    <div id="searchBar">
-        <div class="input-group stylish-input-group">
-            <input type="text" id="searchArea" class="form-control" placeholder="Search">
-                    <span class="input-group-addon">
-                        <button type="submit" style="background-color: inherit;border: none;">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"style="padding:0;top:50%">
+                    <button ng-click="logout()" id="logoutButton" class="btn btn-lg btn-primary" style="width: 50%;font-size: unset">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="dataPanel col-lg-9 col-md-9 col-sm-7 col-xs-9">
+        <div class="row">
+            <div id="searchBar" class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
+                <div class="input-group stylish-input-group">
+                    <input type="text" id="searchArea" class="form-control" placeholder="Search">
+                        <span class="input-group-addon">
+                            <button type="submit" style="background-color: inherit;border: none;">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2">
+                <a href="userInfo.html">
+                    <span style="background-image:url('/app/images/one2.jpg');background-size: 32px 32px;">A</span>
+                </a>
 
-    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+            </div>
+        </div>
         <div id="homeData">
             <div class="chart-container" style="position: relative; height:40vh; width:80vw">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
     </div>
-
 </div>

@@ -1,0 +1,39 @@
+.swagTable{
+    background-color: #e3fbf9;
+    padding: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.swagRow{
+    background-color: white;
+    margin-bottom: 5px!important;
+    border-radius: 5px;
+    font-family: "monospace",Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.swagCol{
+    padding: 15px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.swagHeading{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    font-family: "monospace",Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: grey;
+}
+.bold{
+    font-weight: bold;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+.swagRowContainer{
+    display: flex;
+    flex-wrap: wrap;
+}

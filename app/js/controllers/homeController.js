@@ -3,6 +3,7 @@ app.controller('homeController',['$scope','$cookieStore','$location',function($s
     {
         $('#userInfo').toggle(500);
     }
+    $scope.userPic = "app/images/one2.jpg";
     // verify the user using the cookie stored in browser
     function verifyCookie() {
         var cookie = $cookieStore.get('userId');
@@ -33,11 +34,30 @@ app.controller('homeController',['$scope','$cookieStore','$location',function($s
         $location.path('/data');
     }
     //toggle slide bar
+    var toggle = false;
     $scope.toggleSlideBar = function() {
         $('#userInfo').toggle(500);
+        if(toggle == false)
+        {
+            $('#userInfo').show(500);
+            $('#userInfo').removeClass('col-xs-1');
+            $('#userInfo').addClass('col-xs-10');
+            $('.dataPanel').addClass('col-xs-0');
+            toggle = true;
+        }
+        else{
+            $('#userInfo').addClass('col-xs-0');
+            $('.dataPanel').removeClass('col-xs-5');
+            $('.dataPanel').addClass('col-xs-10');
+            $('.dataPanel').show(500);
+            toggle = false;
+        }
+
     };
 
-
+    $scope.showSwagTable = function(){
+        $location.path('/swagTable');
+    }
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',

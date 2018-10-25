@@ -16,6 +16,10 @@ app.config(function ($routeProvider) {
             templateUrl : '../app/views/table.html',
             controller : 'tableController'
         })
+        .when('/swagTable',{
+            templateUrl : '../app/views/swagTable.html',
+            controller : 'homeController'
+        })
         .otherwise({
             redirectTo : '/'
         })
